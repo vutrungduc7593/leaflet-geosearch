@@ -1,7 +1,3 @@
-export { default as GeoSearchControl } from './SearchControl';
-export { default as SearchControl } from './SearchControl';
-export { default as SearchElement } from './SearchElement';
-
 export { default as AlgoliaProvider } from './providers/algoliaProvider';
 export { default as BingProvider } from './providers/bingProvider';
 export { default as EsriProvider } from './providers/esriProvider';

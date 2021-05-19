@@ -1,7 +1,7 @@
 {
-  "name": "leaflet-geosearch",
-  "version": "3.3.1",
-  "description": "Adds support for address lookup (a.k.a. geocoding / geoseaching) to Leaflet.",
+  "name": "@skymapglobal/geosearch",
+  "version": "1.0.0",
+  "description": "Adds support for address lookup (a.k.a. geocoding / geoseaching).",
   "publishConfig": {
     "tag": "latest"
   },
@@ -25,11 +25,10 @@
   "scripts": {
     "clean": "rimraf ./dist .docz/dist",
     "start": "concurrently npm:build:watch npm:docz:dev",
-    "build": "run-p build:dist build:lib build:css",
-    "build:dist": "microbundle build --external leaflet --globals leaflet=L --format es,cjs,umd",
+    "build": "run-p build:dist build:lib",
+    "build:dist": "microbundle build --format es,cjs,umd",
     "build:compat": "cp ./dist/geosearch.umd.js ./dist/bundle.min.js",
     "build:lib": "tsc",
-    "build:css": "mkdir -p dist && cp ./assets/css/leaflet.css ./dist/geosearch.css",
     "build:watch": "npm run build:dist -- --compress false --watch",
     "test": "jest",
     "lint": "tsc --noEmit && eslint '{docs,src,test}/**/*.{js,ts,tsx}' --quiet --fix && prettier '**/*.{md,mdx,json}' --write",
@@ -63,7 +62,7 @@
     "type": "git",
     "url": "git+https://github.com/smeijer/leaflet-geosearch.git"
   },
-  "author": "Stephan Meijer <stephan@meijer.ws>",
+  "author": "Duc Vu <duc.vt@eofactory.ai>",
   "bugs": {
     "url": "https://github.com/smeijer/leaflet-geosearch/issues"
   },
@@ -98,12 +97,8 @@
     "ts-jest": "^25.3.1",
     "typescript": "^3.8.3"
   },
-  "dependencies": {
-    "leaflet": "^1.6.0"
-  },
-  "optionalDependencies": {
-    "leaflet": "^1.6.0"
-  },
+  "dependencies": {},
+  "optionalDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

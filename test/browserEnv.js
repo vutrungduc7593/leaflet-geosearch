@@ -4,6 +4,3 @@ browserEnv();
 
 const fetch = require('node-fetch');
 window.fetch = global.fetch = fetch;
-
-const leaflet = require('leaflet');
-window.L = global.L = leaflet;

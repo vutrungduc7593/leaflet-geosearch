@@ -7,7 +7,7 @@ import {
   LocationIQProvider,
   OpenCageProvider,
   OpenStreetMapProvider,
-} from 'leaflet-geosearch';
+} from '@skymapglobal/geosearch';
 
 export default {
   Algolia: new AlgoliaProvider(),
